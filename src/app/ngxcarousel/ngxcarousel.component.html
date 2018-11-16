@@ -1,0 +1,42 @@
+<div>
+  <ngx-carousel [inputs]="Config">
+  <ngx-item *ngFor="let temprec of itemList" NgxCarouselItem class="ngx">
+    <!-- <div [ngStyle]="{'background-color': item.color, 'height.px': 100, 'color': 'white'}">
+      <h3>{{item.title}}</h3>
+    </div> -->
+    <div class="flex-container">
+      <div class="card" >    
+        <div class="card-body">
+              <section class="sub-body">
+              <img src="{{temprec.thumbnail}} " alt=" " class="col1">
+              <section class="card-body-right">
+              <section class="col2">
+                  <div class="lbl fa fa-dashboard">
+                      Odometer</div>
+                      <div class="carAttr ">{{ temprec.mileage | number: '1.0-0'}}</div>
+              </section>
+              <section class="col3">
+    
+                  <div class="lbl">
+                      <img src="http://icons.iconarchive.com/icons/icons8/ios7/16/Editing-Paint-Bucket-icon.png "> Interior</div>
+                      <div class="card-text carAttr ">Black</div>
+                </section>
+                <section class="col4">                
+                <a class="lbl fa fa-map-marker"> Location</a>
+                <div class=" carAttr1"> ADESA Cincinnati Christi,TX(25mi) </div>
+              </section>
+              
+              </section>
+             </section>
+              
+        </div> 
+        <div class="card-footer"> <img src="{{temprec.reason_badge}} " >
+          <span class="lblReason">{{ temprec.reason_name | uppercase }}</span>
+          <div class="carAttrReason">{{ temprec.reason_description }}</div></div>
+      </div>    
+    </div>
+  </ngx-item>
+  <button NgxCarouselPrev class="leftRs">&lt;</button>
+  <button NgxCarouselNext class="rightRs">&gt;</button>
+</ngx-carousel>
+</div>
